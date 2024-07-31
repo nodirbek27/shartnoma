@@ -1,10 +1,10 @@
 import React from 'react';
+import Admin from '../../components/Admin';
 
 const AdminDashboard = () => {
     return (
         <div>
-            <h1>Admin Dashboard</h1>
-            {/* Admin panelidagi komponentlar va funksiyalar */}
+            <Admin />
         </div>
     );
 };

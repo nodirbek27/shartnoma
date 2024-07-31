@@ -1,9 +1,10 @@
 import React from 'react';
+import NotFound from '../../components/NotFound';
 
 const NotFoundPage = () => {
     return (
         <div>
-            <h1>404 - Not Found</h1>
+            <NotFound />
         </div>
     );
 };

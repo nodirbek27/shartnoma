@@ -1,10 +1,10 @@
 import React from 'react';
+import User from '../../components/User';
 
 const UserDashboard = () => {
     return (
         <div>
-            <h1>User Dashboard</h1>
-            {/* User sahifasidagi komponentlar va funksiyalar */}
+            <User />
         </div>
     );
 };

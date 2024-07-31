@@ -1,42 +1,60 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import AdminDashboard from '../../pages/AdminDashboard';
-import UserDashboard from '../../pages/UserDashboard';
-import LoginPage from '../../pages/LoginPage';
-import NotFoundPage from '../../pages/NotFoundPage';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import SuperadminDashboard from "../../pages/SuperadminDashboard";
+import AdminDashboard from "../../pages/AdminDashboard";
+import UserDashboard from "../../pages/UserDashboard";
+import LoginPage from "../../pages/LoginPage";
+// import NotFoundPage from "../../pages/NotFoundPage";
 
 const App = () => {
-    // Bu yerda autentifikatsiya holatini va foydalanuvchi rolini tekshirish kerak bo'ladi
-    const isAuthenticated = true; // Misol uchun
-    const userRole = 'admin'; // Misol uchun
+  const isAuthenticated = true;
+  const role = 'superadmin';
+//   const role = "admin";
 
-    return (
-        <Router>
-            <Switch>
-                <Route path="/login" component={LoginPage} />
-                <PrivateRoute path="/admin" component={AdminDashboard} isAuthenticated={isAuthenticated} role={userRole} requiredRole="admin" />
-                <PrivateRoute path="/user" component={UserDashboard} isAuthenticated={isAuthenticated} role={userRole} requiredRole="user" />
-                <Route path="/" exact>
-                    <Redirect to="/login" />
-                </Route>
-                <Route component={NotFoundPage} />
-            </Switch>
-        </Router>
-    );
-};
-
-// PrivateRoute komponentini yaratamiz
-const PrivateRoute = ({ component: Component, isAuthenticated, role, requiredRole, ...rest }) => (
-    <Route
-        {...rest}
-        render={(props) =>
-            isAuthenticated && role === requiredRole ? (
-                <Component {...props} />
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/superadmin"
+          element={
+            isAuthenticated && role === "superadmin" ? (
+              <SuperadminDashboard />
             ) : (
-                <Redirect to="/login" />
+              <Navigate to="/login" />
             )
-        }
-    />
-);
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            isAuthenticated && role === "admin" ? (
+              <AdminDashboard />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            isAuthenticated && role === "user" ? (
+              <UserDashboard />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route path="/" element={<Navigate to="/login" />} />
+        {/* <Route path="*" element={<NotFoundPage />} /> */}
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
