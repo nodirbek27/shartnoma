@@ -1,10 +1,10 @@
 import React from 'react';
-import AnalitikaCom from "../../../components/Analitika"
+import SuperadminAnalitika from "../../../components/SuperadminAnalitika"
 
 const Analitika = () => {
   return (
     <div>
-      <AnalitikaCom />
+      <SuperadminAnalitika />
     </div>
   );
 };

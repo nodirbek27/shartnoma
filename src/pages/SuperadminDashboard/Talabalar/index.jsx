@@ -1,10 +1,10 @@
 import React from 'react';
-import TalabalarCom from "../../../components/Talabalar"
+import SuperadminTalabalar from "../../../components/SuperadminTalabalar"
 
 const Talabalar = () => {
   return (
     <div>
-      <TalabalarCom />
+      <SuperadminTalabalar />
     </div>
   );
 };

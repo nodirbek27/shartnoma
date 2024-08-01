@@ -1,7 +1,10 @@
+import React from 'react'
+import AdminAnalitika from '../../../components/AdminAnalitika';
+
 const Analitika = () => {
   return (
     <div>
-      <h2>Analitika</h2>
+      <AdminAnalitika />
     </div>
   );
 };

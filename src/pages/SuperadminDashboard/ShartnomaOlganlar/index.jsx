@@ -1,10 +1,10 @@
 import React from 'react';
-import ShartnomaOlganlarCom from "../../../components/ShartnomaOlganlar"
+import SuperadminShartnomaOlganlar from "../../../components/SuperadminShartnomaOlganlar"
 
 const ShartnomaOlganlar = () => {
   return (
     <div>
-      <ShartnomaOlganlarCom />
+      <SuperadminShartnomaOlganlar />
     </div>
   );
 };

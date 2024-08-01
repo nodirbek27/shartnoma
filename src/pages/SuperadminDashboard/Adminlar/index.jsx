@@ -1,10 +1,10 @@
 import React from 'react';
-import AdminlarCom from "../../../components/Adminlar"
+import SuperadminAdminlar from "../../../components/SuperadminAdminlar"
 
 const Adminlar = () => {
   return (
     <div>
-      <AdminlarCom />
+      <SuperadminAdminlar />
     </div>
   );
 };

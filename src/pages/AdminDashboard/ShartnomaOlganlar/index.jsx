@@ -1,7 +1,11 @@
+import React from 'react'
+import AdminShartnomaOlganlar from '../../../components/AdminShartnomaOlganlar';
+
+
 const ShartnomaOlganlar = () => {
     return (
       <div>
-        <h2>Shartnoma olganlar</h2>
+        <AdminShartnomaOlganlar />
       </div>
     );
   };

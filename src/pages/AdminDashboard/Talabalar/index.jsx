@@ -1,7 +1,11 @@
+import React from 'react'
+import AdminTalabalar from '../../../components/AdminTalabalar';
+
+
 const Talabalar = () => {
   return (
     <div>
-      <h2>Talabalar</h2>
+      <AdminTalabalar />
     </div>
   );
 };
