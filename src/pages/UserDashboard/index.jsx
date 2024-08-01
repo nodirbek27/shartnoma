@@ -1,10 +1,10 @@
 import React from 'react';
-import User from '../../components/User';
+import UserNavbar from '../../components/UserNavbar';
 
 const UserDashboard = () => {
     return (
         <div>
-            <User />
+            <UserNavbar />
         </div>
     );
 };

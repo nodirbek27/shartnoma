@@ -18,9 +18,9 @@ import NotFoundPage from "../../pages/NotFoundPage";
 
 const App = () => {
   const isAuthenticated = true;
-  const role = "superadmin";
+  // const role = "superadmin";
   // const role = "admin";
-  // const role = "user";
+  const role = "user";
 
   return (
     <Router>
