@@ -1,10 +1,11 @@
 const ShartnomaOlganlar = () => {
-    return (
+  return (
+    <div>
       <div>
-        <h2>Shartnoma olganlar</h2>
+        <h1 className="text-2xl font-medium">Shartnoma olgan talabalar</h1>
       </div>
-    );
-  };
-  
-  export default ShartnomaOlganlar;
-  
+    </div>
+  );
+};
+
+export default ShartnomaOlganlar;

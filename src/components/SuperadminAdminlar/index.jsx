@@ -1,7 +1,9 @@
 const Adminlar = () => {
   return (
     <div>
-      <h2>Adminlar</h2>
+      <div>
+        <h1 className="text-2xl font-medium">Adminlar</h1>
+      </div>
     </div>
   );
 };

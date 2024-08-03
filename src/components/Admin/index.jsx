@@ -5,6 +5,7 @@ import logo from "../../assets/logo.png";
 import analitikaImg from "../../assets/Chart.png";
 import talabaImg from "../../assets/graduate.png";
 import shartnomaImg from "../../assets/contract.png";
+import Exit from "../../assets/icons/exit.svg"
 
 const AdminDashboard = () => {
   const [open, setOpen] = useState(true);
@@ -71,6 +72,17 @@ const AdminDashboard = () => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="absolute left-5 bottom-2">
+        <Link
+          to="/login"
+          className="flex rounded-md p-2 cursor-pointer text-gray-300 text-sm items-center gap-x-4"
+        >
+          <img src={Exit} alt="icon" width={24} />
+          <span className={`${!open && "hidden"} origin-left duration-200`}>
+            CHIQISH
+          </span>
+        </Link>
       </div>
       <div className="h-screen flex-1 p-7 overflow-y-scroll">
         <Outlet />

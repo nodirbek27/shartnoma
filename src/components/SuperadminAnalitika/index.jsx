@@ -1,7 +1,9 @@
 const Analitika = () => {
   return (
     <div>
-      <h2>Analitika</h2>
+      <div>
+        <h1 className="text-2xl font-medium">Analitika</h1>
+      </div>
     </div>
   );
 };

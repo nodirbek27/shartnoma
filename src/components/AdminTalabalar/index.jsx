@@ -1,7 +1,9 @@
 const Talabalar = () => {
   return (
     <div>
-      <h2>Talabalar</h2>
+      <div>
+        <h1 className="text-2xl font-medium">Ro'yxatdan o'tgan talabalar</h1>
+      </div>
     </div>
   );
 };

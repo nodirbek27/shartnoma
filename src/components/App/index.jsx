@@ -5,14 +5,24 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+
+// Superadmin
 import SuperadminDashboard from "../../pages/SuperadminDashboard";
 import Analitika from "../../pages/SuperadminDashboard/Analitika";
 import Adminlar from "../../pages/SuperadminDashboard/Adminlar";
 import Talabalar from "../../pages/SuperadminDashboard/Talabalar";
 import ShartnomaOlganlar from "../../pages/SuperadminDashboard/ShartnomaOlganlar";
 
+// Admin
 import AdminDashboard from "../../pages/AdminDashboard";
+import AdminAnalitika from "../../pages/AdminDashboard/Analitika";
+import AdminTalabalar from "../../pages/AdminDashboard/Talabalar";
+import AdminShartnomaOlganlar from "../../pages/AdminDashboard/ShartnomaOlganlar";
+
+// User
 import UserDashboard from "../../pages/UserDashboard";
+
+// Login and NotFoundPage
 import LoginPage from "../../pages/LoginPage";
 import NotFoundPage from "../../pages/NotFoundPage";
 
@@ -52,9 +62,9 @@ const App = () => {
             )
           }
         >
-          <Route path="analitika" element={<Analitika />} />
-          <Route path="talabalar" element={<Talabalar />} />
-          <Route path="shartnoma-olganlar" element={<ShartnomaOlganlar />} />
+          <Route path="analitika" element={<AdminAnalitika />} />
+          <Route path="talabalar" element={<AdminTalabalar />} />
+          <Route path="shartnoma-olganlar" element={<AdminShartnomaOlganlar />} />
           <Route path="" element={<Navigate to="/admin/analitika" />} />
         </Route>
         <Route
