@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://shartnoma.pythonanywhere.com/",
+  baseURL: "http://shartnoma.kspi.uz/",
   headers: {
     // "Content-Type": "multipart/form-data",
     Accept: "application/json",
